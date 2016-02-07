@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="angularfirst">
+<head>
+<meta charset="UTF-8">
+<title>Angular Kick Start</title>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container">  
+
+<div ng-controller="helloHead">
+  <h2>First {{sayHello}} !!!</h2>
+</div><!-- end of helloHead controller -->  
+
+<div class="row">
+  <div class="col-md-12">
+    <div ng-controller="EmpListCtrl">
+      <p>Total number of Employees: {{empList.length}}</p>
+      <ul>
+      	<li ng-repeat="emp in empList">
+      		<span>{{emp.name}}</span>
+      		<p>Department is: {{emp.department}}</p>
+      	</li>
+      </ul>
+    </div> <!-- end of EmpListCtrl controller -->
+  </div><!-- end of col-12 -->
+</div><!-- end of row -->
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div ng-controller="SalaryListCtrl">
+      <p>Total number of Employee Salary: {{salList.length}}</p>  
+      <ul>
+        <li ng-repeat="sal in salList">
+          <span>{{sal.employee_name}}</span>
+          <p>Salary is: {{sal.salary}}</p>
+        </li>
+      </ul>
+    </div><!-- end of SalaryListCtrl controller -->
+  </div><!-- end of col-12 -->
+</div><!-- end of row -->
+
+
+</div><!-- end of container -->
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+
+</body>
+
+</html>
